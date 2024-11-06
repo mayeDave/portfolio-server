@@ -23,6 +23,12 @@ app.get('/monsuru', (req, res) => {
     res.sendFile(__dirname + '/monsuru.html');
 })
 
+// samuel route
+app.get('/samuel', (req, res) => {
+    // send index.html file
+    res.sendFile(__dirname + '/samuel.html');
+})
+
 
 // listen to the port   
 app.listen(port, () => {
