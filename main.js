@@ -10,6 +10,12 @@ app.get('/', (req, res) => {
     // send index.html file
     res.sendFile(__dirname + '/index.html');
 })
+//define maye route
+app.get('/maye', (req, res) => {
+    // send maye.html file
+    res.sendFile(__dirname + '/maye.html');
+})
+/
 
 
 // listen to the port   
