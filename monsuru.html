@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: blanchedalmond;
+
+        }
+
+        /* main section styling  */
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 50px;
+            color: rgba(206, 119, 5, 0.951);
+
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 50px;
+            color: rgba(206, 119, 5, 0.951);
+        }
+
+        p {
+
+            line-height: 1.2;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        #flex {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+
+
+        /* contact me section styling */
+
+        .contact-section {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #faf3e0;
+            border: 1px solid #f39c12;
+            border-radius: 8px;
+
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #d35400;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form label {
+            align-self: flex-start;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #fff;
+            color: #333;
+
+        }
+
+        .contact-form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color:  #d35400;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #1c5980;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .social-links a {
+            color:  #d35400;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* project list section styling */
+    
+        .project {
+            background-color: #faf3e0;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 340px;
+            height: 260px;
+            border: 1px solid #f39c12; 
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .project h2 {
+            margin: 20px 0px;
+            font-size: 1.5em;
+            color: #d35400;
+        }
+        .project p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .project a {
+            text-decoration: none;
+            color: #d35400 ;
+            font-weight: bold;
+         
+           
+        }
+
+
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deepen shadow on hover */
+}
+
+        #card {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px; 
+            flex-wrap: wrap;
+            
+        }
+
+        .navbar {
+          position: sticky;
+          top: 0;
+          z-index: 999;
+          background-color: #faf3e0 ;
+    
+        }
+
+
+        /* media query for mobile devices */
+
+        @media screen and (max-width: 600px) {
+            
+            h1 {
+        font-size: 30px;
+        margin-top: 30px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 15px;
+    }
+
+    .project h2 {
+        font-size: 1em;
+    }
+
+    .project p {
+        font-size: 16px;
+    }
+
+    #flex, #card {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .project {
+        max-width: 100%;
+        margin: 10px 30px;
+        padding: 10px;
+    }
+
+    .contact-section {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 24px;
+    }
+
+    .contact-section p {
+        font-size: 18px;
+    }
+
+    .contact-form label {
+        font-size: 14px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .social-links {
+        font-size: 14px;
+    }
+
+    .social-links a {
+        font-size: 14px;
+    }
+
+
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit:contain;
+           padding-left: 30px;
+            margin: 30px;
+        }
+
+
+   
+  
+
+    </style>
+</head>
+
+<body>
+    <!-- bg-[#faf3e0] -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Group1 portfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/maye">Maye</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/monsuru">Monsuru</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/samuel">Samuel</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <h1>Taiwo Monsuru's Portfolio</h1>
+
+    <main>
+
+        <div id="flex">
+            <div>
+                <h2>About Me</h2>
+                <p>Hi, I'm Taiwo Monsuru, a full stack developer based in Lagos. I specialize in building robust and
+                    user-friendly
+                    applications across front-end and back-end technologies. Passionate about creating seamless digital
+                    experiences,
+                    I enjoy tackling complex problems and constantly expanding my technical skill set. Outside of work,
+                    I'm a
+                    dedicated Manchester United fan!</p>
+            </div>
+            <img src="https://scontent.flos5-2.fna.fbcdn.net/v/t39.30808-6/449469925_17932490381868658_4004788648951767007_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGp93nb-clGsVRPAwp-B_Osx35QfX9y6b_HflB9f3Lpv-Hud6Fzgg9Af3dt8xuf-K9l0wHIYt7sXaw1evcX_OvK&_nc_ohc=aEMjdMyNW6IQ7kNvgGXXGwo&_nc_zt=23&_nc_ht=scontent.flos5-2.fna&_nc_gid=ARDwvR3hX0Rret_RU_cdxtB&oh=00_AYCASaqIyxmdtXRj_AbSPDiE_uxdVQPzDpT00rgW0Qhqvw&oe=6730F5EE" alt="Taiwo Monsuru" width="18%" height="40%">
+
+        </div>
+    </main>
+
+    <section id="projectList">
+
+        <h2>Projects List</h2>
+      <div id="card">
+          <div class="project">
+            <h2>Portfolio Website</h2>
+            <p>This project showcases my skills and previous works.</p>
+            <a href="https://first-web-project-6fo5.onrender.com" target="_blank">View Project</a>
+        </div>
+    
+        <div class="project">
+            <h2>E-commerce Platform</h2>
+            <p>A travel agency website with features such as booking, payment.</p>
+            <a href="https://just-travel-yf6u.onrender.com" target="_blank">View Project</a>
+        </div>
+    
+        <div class="project">
+            <h2>Event Website</h2>
+            <p>A full-featured platform for my wedding.</p>
+            <a href="https://wedding-project-228r.onrender.com" target="_blank">View Project</a>
+        </div>
+    
+        
+      </div>
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-section">
+
+            <p>If you’d like to discuss a project or just want to say hello, feel free to reach out!</p>
+
+            <form class="contact-form" action="your_form_handling_script" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="social-links">
+                <p>Or connect with me on:</p>
+                <a href="https://www.linkedin.com/in/monsuru-taiwo-3836a8308/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/hajimonsur" target="_blank">GitHub</a> |
+                <a href="mailto:taiwomonsuru29@gmail.com">Email</a>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
